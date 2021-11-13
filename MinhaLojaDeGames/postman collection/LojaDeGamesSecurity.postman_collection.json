@@ -1,0 +1,874 @@
+{
+	"info": {
+		"_postman_id": "5581b7d4-b80b-4e4e-95de-a1b88355af1a",
+		"name": "LojaDeGames",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "PostUsuario Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Lissa Sonoda\",\r\n    \"username\": \"Lissa12345\",\r\n    \"password\": \"1234567890\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/usuarios/cadastrar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								"cadastrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostUsuario Logar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usernamelog\": \"Lissa12345\",\r\n    \"passwordlog\": \"1234567890\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/usuarios/logar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								"logar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categoria",
+			"item": [
+				{
+					"name": "GetCategoria",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2ExMjM0NToxMjM0NTY3ODkw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/categoria",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categoria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCategoria By Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2ExMjM0NToxMjM0NTY3ODkw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/categoria/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categoria",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCategoria By Titulo",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2ExMjM0NToxMjM0NTY3ODkw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/categoria/nome/avent",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categoria",
+								"nome",
+								"avent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostCategoria 1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2ExMjM0NToxMjM0NTY3ODkw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomeCateg\":\"Horror\",\r\n    \"tipoCateg\":\"Contém jogos de: terror, zumbi, terror psicológico\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/categoria",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categoria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostCategoria 2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2ExMjM0NToxMjM0NTY3ODkw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomeCateg\":\"Ação e Aventura\",\r\n    \"tipoCateg\":\"Contém jogos de: tiros, lutas, plataformas, RPG\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/categoria",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categoria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostCategoria 3",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2ExMjM0NToxMjM0NTY3ODkw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomeCateg\":\"Esportes e Corrida\",\r\n    \"tipoCateg\":\"Contém jogos de: futebol, basquete, corrida, direção, simulador\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/categoria",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categoria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostCategoria 4",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2ExMjM0NToxMjM0NTY3ODkw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomeCateg\":\"Casual\",\r\n    \"tipoCateg\":\"Contém jogos de: quebra-cabeça, 2D, infantil, estratégia, simulador\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/categoria",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categoria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutCategoria",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2ExMjM0NToxMjM0NTY3ODkw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idCateg\": 1,\r\n    \"nomeCateg\":\"Horror\",\r\n    \"tipoCateg\":\"Contém jogos de: terror, zumbi, terror psicológico, mistério\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/categoria",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categoria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCategoria",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2ExMjM0NToxMjM0NTY3ODkw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/categoria/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"categoria",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Produto",
+			"item": [
+				{
+					"name": "GetProduto",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2ExMjM0NToxMjM0NTY3ODkw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/produto",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetProduto By Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2ExMjM0NToxMjM0NTY3ODkw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/produto/11",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"produto",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetProduto By Titulo",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2ExMjM0NToxMjM0NTY3ODkw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/produto/nome/plants",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"produto",
+								"nome",
+								"plants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostProduto 1 - Categoria 1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2ExMjM0NToxMjM0NTY3ODkw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomeProd\":\"Outlast\",\r\n    \"descricaoProd\":\"É um jogo de survival horror em primeira pessoa, ambientado em um hospício. Como grande parte do hospicio é escuro, o jogador deve usar a câmera de vídeo de Miles para ver, graças à sua função de visão noturna. Usando a visão noturna há o consumo de baterias, as quais estão espalhadas por todo o ambiente.\",\r\n    \"precoProd\": 37.99,\r\n    \"codigoBarrasProd\": 9994251842365,\r\n    \"categoria\":{\r\n        \"idCateg\":\"1\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/produto",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostProduto 2 - Categoria 1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2ExMjM0NToxMjM0NTY3ODkw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomeProd\":\"Resident Evil 7\",\r\n    \"descricaoProd\":\"Medo e isolamento se infiltram nas paredes de uma casa de campo abandonada. O 7 marca um novo início para o horror de sobrevivência com a “Visão Isolada” da visceral perspectiva em primeira pessoa.\",\r\n    \"precoProd\": 69.99,\r\n    \"codigoBarrasProd\": 9994251842357,\r\n    \"categoria\":{\r\n        \"idCateg\":\"1\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/produto",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostProduto 3 - Categoria 1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2ExMjM0NToxMjM0NTY3ODkw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomeProd\":\"Amnesia\",\r\n    \"descricaoProd\":\"Amnesia: The Dark Descent é um survival horror em primeira pessoa, que te coloca em um ambiente de terror, levado pela bagunça que foi criada na sua mente. Você não sabe onde está e não lembra de nada antes de chegar onde está. Sinta a sensação de estar sendo caçado neste pesadelo que se tornou sua vida. Para Windows, Mac OS, Linux.\",\r\n    \"precoProd\": 36.99,\r\n    \"codigoBarrasProd\": 9994251842391,\r\n    \"categoria\":{\r\n        \"idCateg\":\"1\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/produto",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostProduto 4 - Categoria 2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2ExMjM0NToxMjM0NTY3ODkw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomeProd\":\"Monster Hunter: World\",\r\n    \"descricaoProd\":\"Conheça o Novo Mundo! Em Monster Hunter: World, o jogo mais recente da série, você pode curtir a experiência máxima de caçada, usando tudo à sua disposição para caçar monstros em um novo mundo repleto de surpresas e emoções.\",\r\n    \"precoProd\": 69.99,\r\n    \"codigoBarrasProd\": 9994261842342,\r\n    \"categoria\":{\r\n        \"idCateg\":\"2\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/produto",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostProduto 5 - Categoria 2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2ExMjM0NToxMjM0NTY3ODkw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomeProd\":\"Tomb Raider\",\r\n    \"descricaoProd\":\"Tomb Raider explora a intensa história da origem de Lara Croft, e sua ascensão de uma jovem mulher a uma sobrevivente experiente.\",\r\n    \"precoProd\": 34.99,\r\n    \"codigoBarrasProd\": 9994261842393,\r\n    \"categoria\":{\r\n        \"idCateg\":\"2\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/produto",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostProduto 6 - Categoria 2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2ExMjM0NToxMjM0NTY3ODkw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomeProd\":\"PAYDAY 2\",\r\n    \"descricaoProd\":\"PAYDAY 2 é um jogo FPS de ação cooperativo de quatro jogadores que permite os jogadores a jogar na pele da gangue PAYDAY original - Dallas, Hoxton, Wolf e Chains - enquanto vão para Washington DC para uma épica série de crimes.\",\r\n    \"precoProd\": 23.99,\r\n    \"codigoBarrasProd\": 9994261842317,\r\n    \"categoria\":{\r\n        \"idCateg\":\"2\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/produto",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostProduto 7 - Categoria 3",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2ExMjM0NToxMjM0NTY3ODkw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomeProd\":\"Need for Speed\",\r\n    \"descricaoProd\":\"Trabalhe de dia e arrisque tudo à noite em Need for Speed Heat Edição Deluxe, um jogo eletrizante de corridas de rua, onde a lei desaparece com o pôr do sol.\",\r\n    \"precoProd\": 279.00,\r\n    \"codigoBarrasProd\": 9934251842386,\r\n    \"categoria\":{\r\n        \"idCateg\":\"3\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/produto",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostProduto 8 - Categoria 3",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2ExMjM0NToxMjM0NTY3ODkw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomeProd\":\"Forza Horizon 5\",\r\n    \"descricaoProd\":\"Sua maior aventura Horizon te espera! Explore o mundo aberto vibrante e em constante evolução nas terras mexicanas. Participe de corridas divertidas e sem limites enquanto pilota centenas dos melhores carros do mundo.\",\r\n    \"precoProd\": 249.00,\r\n    \"codigoBarrasProd\": 9934251842338,\r\n    \"categoria\":{\r\n        \"idCateg\":\"3\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/produto",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostProduto 9 - Categoria 3",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2ExMjM0NToxMjM0NTY3ODkw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomeProd\":\"FIFA 22\",\r\n    \"descricaoProd\":\"Powered by Football, EA SPORTS FIFA 22 deixa o jogo ainda mais real com avanços fundamentais de jogabilidade e uma nova temporada de inovações em todos os modos.\",\r\n    \"precoProd\": 249.00,\r\n    \"codigoBarrasProd\": 9934251842374,\r\n    \"categoria\":{\r\n        \"idCateg\":\"3\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/produto",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostProduto 10 - Categoria 4",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2ExMjM0NToxMjM0NTY3ODkw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomeProd\":\"Plants vs Zombies\",\r\n    \"descricaoProd\":\"Zumbis estão invadindo seu lar e sua única defesa é seu arsenal de plantas! Armado com um viveiro de plantas exterminadoras de zumbis como atiradores de ervilha e bombas de cereja, você precisará pensar rápido e plantar mais rápido para parar dezenas de tipos de zumbis na trajetória deles. Obstáculos como o por do sol, nebilha e uma piscina são adicionados ao desafio e com cinco modos de jogo, a diversão nunca acaba!\",\r\n    \"precoProd\": 9.90,\r\n    \"codigoBarrasProd\": 9994251942395,\r\n    \"categoria\":{\r\n        \"idCateg\":\"4\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/produto",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostProduto 11 - Categoria 4",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2ExMjM0NToxMjM0NTY3ODkw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomeProd\":\"Fall Guys: Ultimate Knockout\",\r\n    \"descricaoProd\":\"Fall Guys é um party game para multijogador com até 60 jogadores online, em uma louca corrida free-for-all, com rounds e rounds cada vez mais caóticos até sobrar um único vencedor!\",\r\n    \"precoProd\": 37.99,\r\n    \"codigoBarrasProd\": 9994251942321,\r\n    \"categoria\":{\r\n        \"idCateg\":\"4\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/produto",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostProduto 12 - Categoria 4",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2ExMjM0NToxMjM0NTY3ODkw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomeProd\":\"The Sims 4\",\r\n    \"descricaoProd\":\"Curta o poder de criar e controlar pessoas num mundo virtual onde não há regras. Seja poderoso e livre, divirta-se e jogue com a vida!\",\r\n    \"precoProd\": 159.00,\r\n    \"codigoBarrasProd\": 9994251942346,\r\n    \"categoria\":{\r\n        \"idCateg\":\"4\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/produto",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutProduto",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2ExMjM0NToxMjM0NTY3ODkw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 7,\r\n    \"nomeProd\":\"Need for Speed Heat\",\r\n    \"descricaoProd\":\"Trabalhe de dia e arrisque tudo à noite em Need for Speed Heat Edição Deluxe, um jogo eletrizante de corridas de rua, onde a lei desaparece com o pôr do sol.\",\r\n    \"precoProd\": 279.00,\r\n    \"codigoBarrasProd\": 9934251842386,\r\n    \"categoria\":{\r\n        \"idCateg\":\"3\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/produto",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteProduto",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic TGlzc2ExMjM0NToxMjM0NTY3ODkw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/produto/12",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"produto",
+								"12"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
